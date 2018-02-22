@@ -1,0 +1,3 @@
+WEBHOOK_URL="https://hooks.slack.com/webhook"
+SLACK_USERNAME="UPTIME_GOBOT"
+SLACK_CHANNEL="#matttestingsomestuff"

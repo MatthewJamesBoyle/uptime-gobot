@@ -8,11 +8,15 @@ import (
 )
 
 func Post(url string) {
-	webhookURL := ""
+	webhookURL := os.Getenv("WEBHOOK_URL")
+	if webhookURL == "" {
+		fmt.Println("couldn't find a webhook url")
+		os.Exit(1)
+	}
 	payload := slack.Payload{
 		Text:      url + "is down",
-		Username:  "uptime bot",
-		Channel:   "#matttestingsomestuff",
+		Username:  os.Getenv("SLACK_USERNAME"),
+		Channel:   os.Getenv("SLACK_CHANNEL"),
 		IconEmoji: ":cold_sweat:",
 	}
 	err := slack.Send(webhookURL, "", payload)
