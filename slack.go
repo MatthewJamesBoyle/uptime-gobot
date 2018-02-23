@@ -7,14 +7,14 @@ import (
 	slack "github.com/ashwanthkumar/slack-go-webhook"
 )
 
-func Post(url string) {
+func Post(url string, message string) {
 	webhookURL := os.Getenv("WEBHOOK_URL")
 	if webhookURL == "" {
 		fmt.Println("couldn't find a webhook url")
 		os.Exit(1)
 	}
 	payload := slack.Payload{
-		Text:      url + "is down",
+		Text:      url + message,
 		Username:  os.Getenv("SLACK_USERNAME"),
 		Channel:   os.Getenv("SLACK_CHANNEL"),
 		IconEmoji: ":cold_sweat:",

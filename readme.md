@@ -8,13 +8,13 @@ Clone the repo:
 
 cd into the directory and then run
 
-`go build uptime_gobot.go slack.go`
+`go build main.go slack.go`
 
 This will build the project into a binary.
 
 Now you can run:
 
-`./uptime_gobot files.txt`
+`./gobot  -files=files.txt`
 
 Where `files.txt` is a list of urls you would like to monitor. An example file is included.
 
@@ -22,7 +22,7 @@ By default, uptimeGobot will poll all the urls in your file every second concurr
 
 ```
 // Poll every 5 seconds instead of 1.
-./uptime_gobot files.txt 5
+./uptime_gobot -file=files.txt -interval=5
 ```
 
 One last thing! You need to add an env file containing a couple of things. An example is included in the repo.
@@ -30,7 +30,6 @@ One last thing! You need to add an env file containing a couple of things. An ex
 
 
 #Still to do:
-* move logic out of main()
 * add a flag to see if a url is down and only send the webhook once.
 * Add a timer for how long a site is down
 * Add a webhook for if a site goes back up
