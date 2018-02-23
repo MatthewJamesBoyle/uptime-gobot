@@ -29,7 +29,6 @@ One last thing! You need to add an env file containing a couple of things. An ex
 
 
 
-#Still to do:
 * add a flag to see if a url is down and only send the webhook once.
 * Add a timer for how long a site is down
 * Add a webhook for if a site goes back up
