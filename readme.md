@@ -22,7 +22,7 @@ By default, uptimeGobot will poll all the urls in your file every second concurr
 
 ```
 // Poll every 5 seconds instead of 1.
-./uptime_gobot -file=files.txt -interval=5
+./gobot -file=files.txt -interval=5
 ```
 
 One last thing! You need to add an env file containing a couple of things. An example is included in the repo.
