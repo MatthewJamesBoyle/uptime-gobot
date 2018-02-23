@@ -8,7 +8,7 @@ Clone the repo:
 
 cd into the directory and then run
 
-`go build main.go slack.go`
+`go build gobot.go slack.go`
 
 This will build the project into a binary.
 
