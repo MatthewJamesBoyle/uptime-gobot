@@ -108,7 +108,7 @@ func checkURL(tracked trackedURL, c chan trackedURL) {
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode != 200 {
+	if resp.StatusCode != http.StatusOK {
 		if tracked.up {
 			updateStatus(&tracked, false)
 			Post(tracked.url, BadStatus, tracked.timer)
